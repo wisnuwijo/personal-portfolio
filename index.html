@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Wisnu Wijokangko</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/w-favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css"
+    integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <input type="hidden" id="history">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-tops">
+    <div class="container">
+
+      <div id="introduction" class="">
+        <h1><a href="index.html">Hi, I am Wisnu Wijokangko</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+        <h2>I'm a software <span>developer</span> from Indonesia</h2>
+      </div>
+      <h1 id="salutation"></h1>
+      <input type="text" name="visitor-name" id="ask-name" placeholder="May I have your name?"><br />
+      <button class="btn btn-success" id="notNow" style="margin-top:10px">Not now</button>      
+      <button class="btn btn-md" id="backBtn" style="margin-top:10px;color:#18d26e;display: none;">
+        <h1>Back</h1>
+      </button>      
+    </div>
+  </header>
+
+  <section id="main-menu" class="services">
+    <div class="container">
+      <p id="opening-word"></p>
+      <div class="section-title">
+        <h2>Select to view</h2>
+      </div>
+  
+      <div class="row">
+        <div id="about" onclick="sectionOnClick.about()" class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="#">About</a></h4>
+            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          </div>
+        </div>
+  
+        <div id="experience" onclick="sectionOnClick.experience()" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4><a href="#">Experience</a></h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          </div>
+        </div>
+  
+        <div id="portfolio" onclick="sectionOnClick.portfolio()" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="#">Portfolio</a></h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          </div>
+        </div>
+  
+        <div id="skill" onclick="sectionOnClick.skill()" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-world"></i></div>
+            <h4><a href="#">Skills</a></h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          </div>
+        </div>
+  
+        <div id="education" onclick="sectionOnClick.education()" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-slideshow"></i></div>
+            <h4><a href="#">Education</a></h4>
+            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+          </div>
+        </div>
+  
+        <div id="contact" onclick="sectionOnClick.contact()" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-arch"></i></div>
+            <h4><a href="#">Contact</a></h4>
+            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- ======= About Section ======= -->
+  <section id="about-section" class="about">
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+      <div class="section-title">
+        <h2>About</h2>
+        <!-- <p>Learn more about me</p> -->
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/me.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Full Stack Developer</h3>
+          <p class="font-italic">
+            Innovative Full Stack Developer with 3+ years of experience designing, developing, testing, and
+            maintaining applications. Speed up application 3x and built user friendly app by designing great UI /
+            UX to the app.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 12 October 1999</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Telegram:</strong> @wisnuwijo</li>
+                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Kudus, Indonesia</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> dti.wisnu@gmail.com</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>See Also</h3>
+      <div class="row">
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.experience()">
+          Experience
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.portfolio()">
+          Portfolio
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.skill()">
+          Skills
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.education()">
+          Education
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.contact()">
+          Contact
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- ======= Experience Section ======= -->
+  <section id="experience-section" class="experience">
+    <div class="container">
+    
+      <div class="section-title">
+        <h2>Experience</h2>
+      </div>
+    
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">Professional Experience</h3>
+
+          <div class="resume-item">
+            <h4>IT Team Leader</h4>
+            <h5>Oct 2019 - Present</h5>
+            <p><em>PT Bromindo Mekar Mitra, Semarang, ID </em></p>
+            <p>
+            <ul>
+              <li>Lead in the planning, development, and implementation of building application</li>
+              <li>Monitored and taking care of team work progress</li>
+              <li>Helped team overcome technical barrier</li>
+              <li>Upgraded team member skills with various courses to catch up company needs</li>
+            </ul>
+            </p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Mobile Developer</h4>
+            <h5>Feb 2019 - Present</h5>
+            <p><em>PT Bromindo Mekar Mitra, Semarang, ID </em></p>
+            <p>
+            <ul>
+              <li>Increased the number of user from dozens to hundreds by building a robust application that can
+              work without connection to provide better experience to our user</li>
+              <li>Improved app performance 50% by optimize the app interaction with backend services</li>              
+            </ul>
+            </p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Web Developer</h4>
+            <h5>Feb 2019 - Present</h5>
+            <p><em>PT Bromindo Mekar Mitra, Semarang, ID </em></p>
+            <p>
+            <ul>
+              <li>Communicated the needed information with other team to build application</li>
+              <li>Increased company speed 40% by digitalize company process</li>
+            </ul>
+            </p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Internship - Web Developer</h4>
+            <h5>May 2017 - Oct 2017</h5>
+            <p><em>PT Gamatechno Indonesia, Yogyakarta, ID </em></p>
+            <p>
+            <ul>
+              <li>Added web application features,</li>
+              <li>Fixed bugs and build application to gather place information
+              using Google Maps API</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <h3>See Also</h3>
+      <div class="row">
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.about()">
+          About
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.portfolio()">
+          Portfolio
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.skill()">
+          Skills
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.education()">
+          Education
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.contact()">
+          Contact
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Experience Section -->
+
+  <!-- ======= Skill Section ======= -->
+  <section id="skill-section" class="skill">
+    <div class="interests container">
+  
+      <div class="section-title">
+        <h2>Core Skills</h2>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="icon-box">
+              <i class="ri-flutter-fill"style="color: #5578ff;"></i>
+              <h3>Flutter</h3>
+            </div>
+            <br />
+            <span class="description">
+              Wrote high performance application considering data load factor, connection state and make it even
+              better with beautiful UI and animation.
+            </span>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="fa fa-laravel" style="color: #ee5914;"></i>
+              <h3>Laravel</h3>
+            </div>
+            <br />
+            <span class="description">
+              Worked with data management, authentication and restful API service
+            </span>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-reactjs-line" style="color: #6079dd;"></i>
+              <h3>ReactJS</h3>
+            </div>
+            <br />
+            <span class="description">
+              Created component, managed state and fetching data from API
+            </span>
+          </div>
+        </div>        
+      </div>
+      <div class="section-title" style="margin-top: 40px">
+        <h2>More Skills</h2>
+      
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <div class="icon-box">
+              <i class="fa fa-php" style="color: #5578ff;"></i>
+              <h3>PHP</h3>
+            </div>
+            <br />
+            <span class="description"></span>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="fa fa-database" style="color: #ee5914;"></i>
+              <h3>SQL</h3>
+            </div>
+            <br />
+            <span class="description"></span>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="fa fa-git" style="color: #bfc200;"></i>
+              <h3>Git</h3>
+            </div>
+            <br />
+            <span class="description"></span>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="fa fa-code" style="color: #e62922;"></i>
+              <h3>RESTful API</h3>
+            </div>
+            <br />
+            <span class="description"></span>
+          </div>
+        </div>
+
+        <h3>See Also</h3>
+        <div class="row">
+          <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.about()">
+            About
+          </div>
+          <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.portfolio()">
+            Portfolio
+          </div>
+          <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.experience()">
+            Experience
+          </div>
+          <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.education()">
+            Education
+          </div>
+          <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.contact()">
+            Contact
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skill Section -->
+
+  <!-- ======= Education Section ======= -->
+  <section id="education-section" class="education">
+    <div class="container">
+  
+      <div class="section-title">
+        <h2>Education</h2>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-6">
+  
+          <div class="resume-item">
+            <h4>Binus University</h4>
+            <h5>Mar 2019 - Present</h5>
+            <p><em>Computer Science </em></p>
+            <p>
+            <ul>
+              <li>Learned how to design application</li>
+              <li>Learned how to handle software complexity</li>
+              <li>Learned networking</li>
+            </ul>
+            </p>
+          </div>
+
+          <div class="resume-item">
+            <h4>SMKN 7 Semarang (Vocational High School)</h4>
+            <h5>Jun 2014 - May 2018</h5>
+            <p><em>Computer And Networking </em></p>
+            <p>
+            <ul>
+              <li>Learned basic computer hardware</li>
+              <li>Learned to set up local computer network</li>
+              <li>Learned php language</li>
+            </ul>
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <h3>See Also</h3>
+      <div class="row">
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.about()">
+          About
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.portfolio()">
+          Portfolio
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.experience()">
+          Experience
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.skill()">
+          Skills
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.contact()">
+          Contact
+        </div>
+    </div>
+  </section>
+  <!-- End Education Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact-section" class="contact">
+    <div class="container">
+  
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+  
+      <div class="row mt-2">
+  
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>My Address</h3>
+            <p>Kudus, Central Java, ID 59382</p>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a href="https://twitter.com/wisnuwijo" class="twitter"><i class="icofont-twitter"></i></a>
+              <a href="https://www.instagram.com/wisnuwijo/" class="instagram"><i class="icofont-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/wisnuwijo/" class="linkedin"><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Me</h3>
+            <p>dti.wisnu@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Me</h3>
+            <p>+62 8953 2301 2333</p>
+          </div>
+        </div>
+      </div>
+  
+      <form action="forms/response.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" />
+            <div class="validate"></div>
+          </div>
+          <div class="col-md-6 form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
+              data-msg="Please enter a valid email" />
+            <div class="validate"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4"
+            data-msg="Please enter at least 8 chars of subject" />
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="msg" rows="5" data-rule="required"
+            data-msg="Please write something for us" placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="mb-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Send Message</button></div>
+      </form>
+      <br />
+  
+      <h3>See Also</h3>
+      <div class="row">
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.about()">
+          About
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.portfolio()">
+          Portfolio
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.experience()">
+          Experience
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.skill()">
+          Skills
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.education()">
+          Education
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio-section" class="portfolio">
+    <div class="container">
+  
+      <div class="section-title">
+        <h2>Portfolio</h2>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="row portfolio-container">
+  
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/firecek/firecek-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Firecek</h4>
+              <p>Mobile Application</p>
+              <div class="portfolio-links">
+                <a href="portfolio-details/firecek-mobile.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/firecek-web/firecek-web-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Firecek Web</h4>
+              <p>Web Application</p>
+              <div class="portfolio-links">
+                <a href="portfolio-details/firecek-web.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox"
+                  title="Portfolio Details">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/firecek-b/firecek-b-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Firecek Backoffice</h4>
+              <p>Mobile Application</p>
+              <div class="portfolio-links">
+                <a href="portfolio-details/firecek-mobile-b.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox"
+                  title="Portfolio Details">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/company-website/bisma-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Bisma</h4>
+              <p>Web Application</p>
+              <div class="portfolio-links">
+                <a href="portfolio-details/bisma.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox"
+                  title="Portfolio Details">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/company-website/3satya-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Trisatya Otomasi</h4>
+              <p>Company Website</p>
+              <div class="portfolio-links">
+                <a href="portfolio-details/3satya.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox"
+                  title="Portfolio Details">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/company-website/glow-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Glow Indonesia</h4>
+              <p>Company Website</p>
+              <div class="portfolio-links">
+                <a href="portfolio-details/glow.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox"
+                  title="Portfolio Details">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <h3>See Also</h3>
+      <div class="row">
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.about()">
+          About
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.contact()">
+          Contact
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.experience()">
+          Experience
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.skill()">
+          Skills
+        </div>
+        <div class="col-md-2 btn-suggestion" onclick="sectionOnClick.education()">
+          Education
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- End Portfolio Section -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(function () {
+      $('#ask-name').focus();
+    });
+
+    $('#ask-name').change(function() {
+      animations.firstTransition();
+    });
+
+    $('#notNow').click(function () {
+      animations.firstTransition();
+    });
+
+    $('#backBtn').click(function () {
+      $('.section-show').removeClass('section-show');
+
+      var currentHistory = $('#history').val();
+      var currentHistoryToArr = currentHistory.split(',');
+      console.log(currentHistoryToArr);      
+      
+      // remove last history
+      if (currentHistoryToArr.length > 0) {
+        currentHistoryToArr.pop();
+        currentHistoryToArr.join();
+        $('#history').val(currentHistoryToArr);
+      }
+
+      var lastHistory = currentHistoryToArr[(currentHistoryToArr.length - 1)];
+      console.log('lastHistory = ' + lastHistory);
+
+      if (currentHistoryToArr.length > 0) {
+        $('#'+ lastHistory).addClass('section-show');        
+      } else {
+        $(this).hide();
+        $('#main-menu').addClass('section-show');
+      }
+
+    });
+
+    var animations = {
+      firstTransition: function () {
+        $('#introduction')
+          .delay(300)
+          .fadeOut()
+          .queue(function () {
+            // move the header up
+            section.modeHeaderUp('#header');
+
+            // give visitor some words
+            var visitorName = $('#ask-name').val();
+            $('#salutation').text('Hi '+ visitorName + '! Glad to see you');
+            $('#opening-word').text('Sorry we can\'t shake hand yet since pandemic still around. Wish you safe and healthy 😷');
+
+            // hide input name
+            $('#ask-name').hide();
+
+            // show another section
+            $('#main-menu').addClass('section-show');            
+          });
+        $('#notNow').fadeOut();
+      }
+    }
+
+    var section = {
+      modeHeaderUp: function (id) {
+        $(id).attr('class','header-tops header-top');
+      },
+      hide: function(id) {        
+        $(id).fadeOut();
+      },
+      show: function(id) {        
+        $(id).attr('class','animate__animated animate__fadeInRight');
+      },
+      recordHistory: function(id) {
+        var currentHistory = $('#history').val();
+        
+        var appendHistory;
+        if (currentHistory == '') {
+          appendHistory = id;
+        } else {
+          appendHistory = currentHistory + ',' + id;
+        }
+
+        $('#history').val(appendHistory);
+      }
+    }
+
+    // handle section onclick
+    var sectionOnClick = {
+      about: function() {
+        $('.section-show').removeClass('section-show');
+
+        // record history
+        section.recordHistory('about-section');
+
+        // change the salutation to name
+        $('#salutation').text('Wisnu Wijokangko');
+
+        $('#main-menu').removeClass('section-show');
+        $('#about-section').addClass('section-show');
+
+        // show back btn
+        $('#backBtn').show();
+      },
+      experience: function () {
+        $('.section-show').removeClass('section-show');
+
+        // record history
+        section.recordHistory('experience-section');
+
+        // change the salutation to name
+        $('#salutation').text('Wisnu Wijokangko');
+
+        $('#main-menu').removeClass('section-show');
+        $('#experience-section').addClass('section-show');
+
+        // show back btn
+        $('#backBtn').show();
+      },      
+      skill: function () {
+        $('.section-show').removeClass('section-show');
+
+        // record history
+        section.recordHistory('skill-section');
+
+        // change the salutation to name
+        $('#salutation').text('Wisnu Wijokangko');
+
+        $('#main-menu').removeClass('section-show');
+        $('#skill-section').addClass('section-show');
+
+        // show back btn
+        $('#backBtn').show();
+      },
+      education: function () {
+        $('.section-show').removeClass('section-show');
+
+        // record history
+        section.recordHistory('education-section');
+
+        // change the salutation to name
+        $('#salutation').text('Wisnu Wijokangko');
+
+        $('#main-menu').removeClass('section-show');
+        $('#education-section').addClass('section-show');
+
+        // show back btn
+        $('#backBtn').show();
+      },
+      contact: function () {
+        $('.section-show').removeClass('section-show');
+
+        // record history
+        section.recordHistory('contact-section');
+
+        // change the salutation to name
+        $('#salutation').text('Wisnu Wijokangko');
+
+        $('#main-menu').removeClass('section-show');
+        $('#contact-section').addClass('section-show');
+
+        // show back btn
+        $('#backBtn').show();
+      },
+      portfolio: function () {
+        $('.section-show').removeClass('section-show');
+
+        // record history
+        section.recordHistory('portfolio-section');
+
+        // change the salutation to name
+        $('#salutation').text('Wisnu Wijokangko');
+
+        $('#main-menu').removeClass('section-show');
+        $('#portfolio-section').addClass('section-show');
+
+        // show back btn
+        $('#backBtn').show();
+      }
+    }
+  </script>
+</body>
+</html>

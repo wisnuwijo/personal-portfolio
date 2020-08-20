@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "sticker_db_username": "root",
+    "sticker_db_password": "",
+    "sticker_dbname": "wijokangko",
+    "firecek_db_username": "root",
+    "firecek_db_password": "",
+    "firecek_dbname": "wijokangko"
+}
