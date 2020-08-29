@@ -302,10 +302,17 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #header.header-top {
-    height: 60px;
+    height: 120px;
   }
+
+  #header #salutation{
+    width: 100% !important;
+    text-align: center;
+  }
+
   #header.header-top h1 {
     font-size: 26px;
+    margin-top: 0px;
   }
 }
 
@@ -354,6 +361,7 @@ section .container {
   text-transform: uppercase;
   color: #aaaaaa;
   font-family: "Poppins", sans-serif;
+  margin-top: 0px;
 }
 
 .section-title h2::after {
@@ -363,6 +371,7 @@ section .container {
   display: inline-block;
   background: #4ceb95;
   margin: 4px 10px;
+  margin-top: 0px;
 }
 
 .section-title p {
@@ -373,6 +382,13 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-top: 40px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -480,9 +496,17 @@ section .container {
 }
 
 /*--------------------------------------------------------------
+# Icon box base
+--------------------------------------------------------------*/
+.icon-box p {
+  color: transparent !important;
+}
+
+/*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
 .interests .icon-box {
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -657,6 +681,7 @@ section .container {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  width: 100%;
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
   padding: 80px 20px;
@@ -1208,6 +1233,7 @@ input {
 .btn-suggestion {
   background-color: #139a52;
   padding: 20px;
+  margin-bottom: 0px;
   color: white;
   border: 1px solid #139a52;
   border-radius: 15px;
@@ -1215,7 +1241,21 @@ input {
   margin-right: 10px;
 }
 
+@media (max-width : 425px) {
+  .btn-suggestion {
+    margin-bottom: 10px;
+  }
+}
+
 .description {
   color: #a5a5a5;
   font-size: 12pt;
+}
+
+#main-menu {
+  padding-top: 60px;
+}
+
+#backBtn h1 {
+  font-size: 15pt !important;
 }
